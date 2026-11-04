@@ -1,0 +1,21 @@
+fact,expected,observed,reproduced
+hour.csv rows,17379,17379,True
+hour.csv columns,17,17,True
+day.csv rows,731,731,True
+day.csv columns,16,16,True
+possible hours (731 x 24),17544,17544,True
+hours absent from hour.csv,165,165,True
+null cells (hour.csv),0,0,True
+duplicate rows (hour.csv),0,0,True
+rows where casual + registered != cnt,0,0,True
+days where hourly sums != day.csv,0,0,True
+windspeed = 0 rows,2180,2180,True
+hum = 0 rows,22,22,True
+weathersit = 4 rows,3,3,True
+"season 1 months (Jan-mid Mar, plus late Dec)","[1, 2, 3, 12]","[1, 2, 3, 12]",True
+season 1 last March day,2011/2012-03-20,2011/2012-03-20,True
+"corr(temp, atemp) ~ 0.99",0.99,0.99,True
+rentals 2011,1243103,1243103,True
+rentals 2012,2049576,2049576,True
+peak hour,2012-09-12 18:00 = 977,2012-09-12 18:00 = 977,True
+lowest day,2012-10-29 = 22,2012-10-29 = 22,True

@@ -1,0 +1,117 @@
+# Fleet or Flow? — single source of configuration.
+# Every seed, date, assumption and provider name lives here (Part 7 of the blueprint).
+
+project:
+  name: fleet-or-flow
+  seed: 42
+
+paths:
+  raw: raw
+  warehouse: warehouse/bikes.duckdb
+  figures: artifacts/figures
+  tables: artifacts/tables
+  models: artifacts/models
+  docs: docs
+
+data:
+  start: "2011-01-01"
+  end: "2012-12-31"
+  # Readme scaling (assumption register: x41 vs min-max alternative)
+  scale:
+    temp: 41
+    atemp: 50
+    hum: 100
+    windspeed: 67
+  night_lull_hours: [0, 1, 2, 3, 4, 5]
+  night_lull_max_run: 2           # a gap run of <= 2 hours inside 00-05 is a 'night lull'
+  night_gaps_as_zero: true        # assumption register: alternative = exclude
+  disruption_z: 3.5               # robust z on STL remainder
+  location:                       # Washington D.C. for daylight
+    name: Washington DC
+    latitude: 38.9072
+    longitude: -77.0369
+    timezone: America/New_York
+
+signals:
+  comfort:
+    hum_threshold: 70             # % humidity above which comfort is penalised
+    hum_penalty: 0.15             # deg C per % point above threshold
+    wind_threshold: 25            # km/h above which comfort is penalised
+    wind_penalty: 0.25            # deg C per km/h above threshold
+  weather_bands:                  # used by the demand cube and desk
+    cold_below_c: 10
+    hot_from_c: 28
+
+archetypes:
+  k_range: [2, 3, 4, 5]
+  n_init: 20
+
+inference:
+  ratio_threshold: 0.75           # pre-registered: reject H0 if both methods < 0.75 and CI excludes 1
+  bootstrap_reps: 2000
+  matched_neighbours: 2           # dry comparison dates per wet hour (nearest dates, same year)
+  elasticity_band_c: [5, 25]
+  probe:
+    hours: [8, 17, 18]
+    temp_c: [15, 28]
+    hum_max: 70
+  experiment:
+    weeks: 8
+    arms: 3
+    clusters: 30                  # station clusters (assumption; no station data)
+    alpha: 0.05
+    power: 0.80
+    cluster_noise_cv: 0.15        # extra cluster-level noise beyond system-level variation (assumption)
+
+forecast:
+  backtest_start: "2012-03-01"
+  backtest_end: "2012-12-31"
+  horizon_days: 28
+  n_folds: 10
+  warmup_folds: 2                 # folds before backtest_start, used only to seed conformal calibration
+  tuning_folds: 2                 # hyper-parameters chosen on first folds only
+  peak_hours: [7, 8, 9, 16, 17, 18, 19]
+  catboost:
+    iterations: 900
+    learning_rate: 0.05
+    depth_grid: [6, 8]
+    variance_power_grid: [1.2, 1.4, 1.6]
+    compare_poisson: true
+  conformal:
+    levels: [0.8, 0.9]
+    hour_groups:                  # Mondrian groups
+      peak: "workday & hour in peak_hours"
+      day: "hour 10-22 otherwise"
+      night: "hour 23-06"
+
+concurrency:
+  n_draws: 2000
+  trip_median_min: 18
+  trip_p90_min: 45
+  trip_median_grid: [12, 18, 25]  # sensitivity; p90 scales with the median (same log-sd)
+  intraday_corr_fallback: 0.8
+
+fleet:
+  service_levels: [0.90, 0.95, 0.99]
+  friction_default: 1.3
+  friction_grid: [1.2, 1.3, 1.4, 1.5]
+  recommended_service_level: 0.95
+  cost:                           # PLACEHOLDERS — replace with finance numbers
+    missed_ride_cu: 3.0           # USD contribution lost per missed ride
+    bike_daily_co: 1.5            # USD per bike per day (capex amortisation + maintenance)
+    cu_grid: [1.0, 2.0, 3.0, 5.0, 8.0]
+    co_grid: [0.5, 1.0, 1.5, 2.0, 3.0]
+    rebalancing_ops_per_day: 400.0  # USD per day for a better rebalancing operation (PLACEHOLDER)
+
+desk:
+  provider: anthropic             # anthropic | gemini | ollama | rules (offline, no LLM)
+  models:
+    anthropic: anthropic/claude-sonnet-5-5
+    gemini: gemini/gemini-2.5-flash
+    ollama: ollama/qwen2.5:7b-instruct
+  ollama_base_url: http://localhost:11434
+  temperature: 0
+  max_rows: 500
+  default_trip_median: 18
+  default_friction: 1.3
+  demand_level_note: "Dates after 2012 are answered at the 2012 demand level."

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-7aaa18157018ca63b1ce385b02e9d1ca"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "stat", "type": "nominal"}, "x": {"field": "ym", "title": "month", "type": "ordinal"}, "y": {"field": "rentals", "title": "rentals per hour", "type": "quantitative"}}, "height": 220, "title": "Supply-cap probe: best-condition commute hours (exploratory)", "width": 560, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-7aaa18157018ca63b1ce385b02e9d1ca": [{"ym": "2011-02", "stat": "mean", "rentals": 247.42857142857142}, {"ym": "2011-03", "stat": "mean", "rentals": 286.8888888888889}, {"ym": "2011-04", "stat": "mean", "rentals": 392.36}, {"ym": "2011-05", "stat": "mean", "rentals": 496.95454545454544}, {"ym": "2011-06", "stat": "mean", "rentals": 510.6}, {"ym": "2011-07", "stat": "mean", "rentals": 525.0}, {"ym": "2011-08", "stat": "mean", "rentals": 450.85714285714283}, {"ym": "2011-09", "stat": "mean", "rentals": 536.8}, {"ym": "2011-10", "stat": "mean", "rentals": 521.9583333333334}, {"ym": "2011-11", "stat": "mean", "rentals": 470.7647058823529}, {"ym": "2011-12", "stat": "mean", "rentals": 374.1666666666667}, {"ym": "2012-01", "stat": "mean", "rentals": 456.07142857142856}, {"ym": "2012-02", "stat": "mean", "rentals": 481.875}, {"ym": "2012-03", "stat": "mean", "rentals": 661.7037037037037}, {"ym": "2012-04", "stat": "mean", "rentals": 688.1315789473684}, {"ym": "2012-05", "stat": "mean", "rentals": 724.2}, {"ym": "2012-06", "stat": "mean", "rentals": 713.7857142857143}, {"ym": "2012-07", "stat": "mean", "rentals": 702.0}, {"ym": "2012-08", "stat": "mean", "rentals": 728.0}, {"ym": "2012-09", "stat": "mean", "rentals": 853.7272727272727}, {"ym": "2012-10", "stat": "mean", "rentals": 836.4347826086956}, {"ym": "2012-11", "stat": "mean", "rentals": 515.625}, {"ym": "2012-12", "stat": "mean", "rentals": 631.6}, {"ym": "2011-02", "stat": "p95", "rentals": 305.69999999999993}, {"ym": "2011-03", "stat": "p95", "rentals": 323.8}, {"ym": "2011-04", "stat": "p95", "rentals": 526.6}, {"ym": "2011-05", "stat": "p95", "rentals": 603.7}, {"ym": "2011-06", "stat": "p95", "rentals": 551.6}, {"ym": "2011-07", "stat": "p95", "rentals": 560.1}, {"ym": "2011-08", "stat": "p95", "rentals": 530.8}, {"ym": "2011-09", "stat": "p95", "rentals": 590.6}, {"ym": "2011-10", "stat": "p95", "rentals": 619.1}, {"ym": "2011-11", "stat": "p95", "rentals": 533.0}, {"ym": "2011-12", "stat": "p95", "rentals": 426.0}, {"ym": "2012-01", "stat": "p95", "rentals": 530.4}, {"ym": "2012-02", "stat": "p95", "rentals": 537.65}, {"ym": "2012-03", "stat": "p95", "rentals": 801.0}, {"ym": "2012-04", "stat": "p95", "rentals": 802.85}, {"ym": "2012-05", "stat": "p95", "rentals": 856.8}, {"ym": "2012-06", "stat": "p95", "rentals": 839.6}, {"ym": "2012-07", "stat": "p95", "rentals": 702.0}, {"ym": "2012-08", "stat": "p95", "rentals": 799.9}, {"ym": "2012-09", "stat": "p95", "rentals": 975.6}, {"ym": "2012-10", "stat": "p95", "rentals": 947.5}, {"ym": "2012-11", "stat": "p95", "rentals": 648.4}, {"ym": "2012-12", "stat": "p95", "rentals": 737.6}, {"ym": "2011-02", "stat": "max", "rentals": 327.0}, {"ym": "2011-03", "stat": "max", "rentals": 331.0}, {"ym": "2011-04", "stat": "max", "rentals": 530.0}, {"ym": "2011-05", "stat": "max", "rentals": 611.0}, {"ym": "2011-06", "stat": "max", "rentals": 555.0}, {"ym": "2011-07", "stat": "max", "rentals": 564.0}, {"ym": "2011-08", "stat": "max", "rentals": 547.0}, {"ym": "2011-09", "stat": "max", "rentals": 591.0}, {"ym": "2011-10", "stat": "max", "rentals": 625.0}, {"ym": "2011-11", "stat": "max", "rentals": 553.0}, {"ym": "2011-12", "stat": "max", "rentals": 431.0}, {"ym": "2012-01", "stat": "max", "rentals": 559.0}, {"ym": "2012-02", "stat": "max", "rentals": 610.0}, {"ym": "2012-03", "stat": "max", "rentals": 810.0}, {"ym": "2012-04", "stat": "max", "rentals": 822.0}, {"ym": "2012-05", "stat": "max", "rentals": 868.0}, {"ym": "2012-06", "stat": "max", "rentals": 850.0}, {"ym": "2012-07", "stat": "max", "rentals": 702.0}, {"ym": "2012-08", "stat": "max", "rentals": 808.0}, {"ym": "2012-09", "stat": "max", "rentals": 977.0}, {"ym": "2012-10", "stat": "max", "rentals": 963.0}, {"ym": "2012-11", "stat": "max", "rentals": 654.0}, {"ym": "2012-12", "stat": "max", "rentals": 743.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

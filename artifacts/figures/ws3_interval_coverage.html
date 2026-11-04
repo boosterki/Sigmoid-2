@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-9f2d4dc01d084c15c8561e0d48d91e7a"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "level", "type": "nominal"}, "x": {"field": "group", "title": null, "type": "nominal"}, "xOffset": {"field": "level", "type": "nominal"}, "y": {"axis": {"format": "%"}, "field": "coverage", "scale": {"domain": [0.5, 1]}, "type": "quantitative"}}, "height": 220, "title": "Empirical interval coverage on the backtest (champion, total rentals)", "width": 420, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-9f2d4dc01d084c15c8561e0d48d91e7a": [{"target": "cnt", "level": "80%", "nominal": 0.8, "group": "all hours", "coverage": 0.8186549787700315, "mean_width": 170.33766926595362, "within_3pts": true}, {"target": "cnt", "level": "80%", "nominal": 0.8, "group": "peak", "coverage": 0.80567081604426, "mean_width": 289.6951825586675, "within_3pts": true}, {"target": "cnt", "level": "80%", "nominal": 0.8, "group": "off-peak", "coverage": 0.8218616567036721, "mean_width": 140.86013481313313, "within_3pts": true}, {"target": "cnt", "level": "90%", "nominal": 0.9, "group": "all hours", "coverage": 0.8960416381317627, "mean_width": 237.43638005394484, "within_3pts": true}, {"target": "cnt", "level": "90%", "nominal": 0.9, "group": "peak", "coverage": 0.8962655601659751, "mean_width": 395.8188472484777, "within_3pts": true}, {"target": "cnt", "level": "90%", "nominal": 0.9, "group": "off-peak", "coverage": 0.8959863364645602, "mean_width": 198.32091505594406, "within_3pts": true}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

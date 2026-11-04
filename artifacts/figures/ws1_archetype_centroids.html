@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-12a1708f541e3b08c56ccd5a6fc0ae95"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "label", "title": "archetype", "type": "nominal"}, "x": {"field": "hour", "title": "hour of day", "type": "ordinal"}, "y": {"axis": {"format": "%"}, "field": "share", "title": "share of the day's rentals", "type": "quantitative"}}, "height": 220, "title": "Day archetypes \u2014 KMeans centroids of the 24-hour shape", "width": 560, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-12a1708f541e3b08c56ccd5a6fc0ae95": [{"archetype": "commute", "hour": 0, "share": 0.008013808330494438, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 0, "share": 0.021506427296499007, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 1, "share": 0.0036218812581877997, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 1, "share": 0.0166188051450226, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 2, "share": 0.001881800451675777, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 2, "share": 0.012760013966081778, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 3, "share": 0.0010326573239936142, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 3, "share": 0.0061923325270961975, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 4, "share": 0.0011198233478928832, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 4, "share": 0.0019642057488876664, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 5, "share": 0.00535775296119592, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 5, "share": 0.0020191568342318076, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 6, "share": 0.022449933624145546, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 6, "share": 0.004364886675051182, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 7, "share": 0.06288891720365065, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 7, "share": 0.010054971555532581, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 8, "share": 0.1067225234971895, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 8, "share": 0.02465044142901688, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 9, "share": 0.05533193212886823, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 9, "share": 0.039402116693177294, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 10, "share": 0.02975589008592045, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 10, "share": 0.05853860179899434, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 11, "share": 0.03402263412168253, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 11, "share": 0.07320133768527058, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 12, "share": 0.04311391215437008, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 12, "share": 0.08588561862707364, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 13, "share": 0.0426337526226001, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 13, "share": 0.0877674250981382, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 14, "share": 0.03926059273578835, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 14, "share": 0.08594301188806223, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 15, "share": 0.042735820931899274, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 15, "share": 0.0851718912784881, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 16, "share": 0.062375319905386015, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 16, "share": 0.08212082431763155, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 17, "share": 0.11428497047499447, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 17, "share": 0.07250126402085717, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 18, "share": 0.10636917690451941, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 18, "share": 0.06188753819013308, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 19, "share": 0.0749294555402425, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 19, "share": 0.0507521972939782, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 20, "share": 0.05346149902432156, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 20, "share": 0.03887630586926077, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 21, "share": 0.03999922962140572, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 21, "share": 0.031688665776752015, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 22, "share": 0.029691911976104338, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 22, "share": 0.02625482906975071, "label": "leisure (n=236 days)"}, {"archetype": "commute", "hour": 23, "share": 0.01894480377347082, "label": "commute (n=492 days)"}, {"archetype": "leisure", "hour": 23, "share": 0.019877131215012455, "label": "leisure (n=236 days)"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

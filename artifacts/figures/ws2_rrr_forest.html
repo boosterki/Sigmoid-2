@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "rule", "strokeWidth": 2}, "encoding": {"color": {"field": "method", "type": "nominal"}, "x": {"field": "ci_low", "scale": {"domain": [0, 1.2]}, "title": "ratio of rate-ratios (casual / registered)", "type": "quantitative"}, "x2": {"field": "ci_high"}, "y": {"field": "label", "sort": null, "title": null, "type": "nominal"}}}, {"mark": {"type": "point", "filled": true, "size": 70}, "encoding": {"color": {"field": "method", "type": "nominal"}, "x": {"field": "rrr", "type": "quantitative"}, "y": {"field": "label", "sort": null, "title": null, "type": "nominal"}}}, {"data": {"name": "data-13398ab0a07e8bbd08d61e367b6a8f62"}, "mark": {"type": "rule", "color": "#555", "strokeDash": [4, 4]}, "encoding": {"x": {"field": "x", "type": "quantitative"}}}, {"data": {"name": "data-014528fcc75045931a3dfd3184be3d28"}, "mark": {"type": "rule", "color": "#c0392b"}, "encoding": {"x": {"field": "x", "type": "quantitative"}}}], "data": {"name": "data-e00c8270cc4be5f8530b18c82f813ad0"}, "height": 240, "title": "Weather sensitivity: casual vs registered (red line = 0.75 rule)", "width": 480, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-e00c8270cc4be5f8530b18c82f813ad0": [{"analysis": "Main (2011-12, wet)", "method": "NB GLM", "rrr": 0.8325911462453834, "ci_low": 0.7806778089001908, "ci_high": 0.8879566050209425, "p_value": 2.4364632939971303e-08, "rr_casual": 0.4884417610049051, "rr_registered": 0.5866526003880304, "nb_alpha": 0.05363588949389766, "n_obs": 34758.0, "median_pair_log_ratio_diff": null, "n_pairs": null, "n_days": null, "mean_gap_days": null, "label": "Main (2011-12, wet) \u00b7 NB GLM"}, {"analysis": "Main (2011-12, wet)", "method": "Matched wet vs dry", "rrr": 0.7902078508085267, "ci_low": 0.7049340568757234, "ci_high": 0.8800501308572458, "p_value": 6.946124968617618e-11, "rr_casual": 0.46551329294443405, "rr_registered": 0.5891023386671356, "nb_alpha": null, "n_obs": null, "median_pair_log_ratio_diff": -0.27348859405544046, "n_pairs": 1393.0, "n_days": 294.0, "mean_gap_days": 2.1629576453697057, "label": "Main (2011-12, wet) \u00b7 Matched wet vs dry"}, {"analysis": "2011 only", "method": "NB GLM", "rrr": 0.8351320208688467, "ci_low": 0.7635739127490727, "ci_high": 0.9133961763694773, "p_value": 8.080363190198491e-05, "rr_casual": 0.4807156375536416, "rr_registered": 0.5756163403404402, "nb_alpha": 0.055225520607573915, "n_obs": 17290.0, "median_pair_log_ratio_diff": null, "n_pairs": null, "n_days": null, "mean_gap_days": null, "label": "2011 only \u00b7 NB GLM"}, {"analysis": "2011 only", "method": "Matched wet vs dry", "rrr": 0.7818545073244852, "ci_low": 0.6750009474925617, "ci_high": 0.8987491471791504, "p_value": 7.916686460136054e-07, "rr_casual": 0.461057832025574, "rr_registered": 0.5896977349447264, "nb_alpha": null, "n_obs": null, "median_pair_log_ratio_diff": -0.2676413215683351, "n_pairs": 767.0, "n_days": 146.0, "mean_gap_days": 2.0599739243807043, "label": "2011 only \u00b7 Matched wet vs dry"}, {"analysis": "2012 only", "method": "NB GLM", "rrr": 0.8195999312849017, "ci_low": 0.7498070479291201, "ci_high": 0.8958892147219669, "p_value": 1.180782622635598e-05, "rr_casual": 0.493878676826718, "rr_registered": 0.6025850637303682, "nb_alpha": 0.0466686883343835, "n_obs": 17468.0, "median_pair_log_ratio_diff": null, "n_pairs": null, "n_days": null, "mean_gap_days": null, "label": "2012 only \u00b7 NB GLM"}, {"analysis": "2012 only", "method": "Matched wet vs dry", "rrr": 0.7965080520411345, "ci_low": 0.6635526775912263, "ci_high": 0.9318031213962337, "p_value": 1.4270839968326272e-05, "rr_casual": 0.4688720925986782, "rr_registered": 0.588659576506659, "nb_alpha": null, "n_obs": null, "median_pair_log_ratio_diff": -0.29050223183596974, "n_pairs": 626.0, "n_days": 148.0, "mean_gap_days": 2.2891373801916934, "label": "2012 only \u00b7 Matched wet vs dry"}, {"analysis": "Excl. disruption days", "method": "NB GLM", "rrr": 0.8524176453945647, "ci_low": 0.8002939189252061, "ci_high": 0.9079362281745914, "p_value": 7.045637647810932e-07, "rr_casual": 0.5483301007975783, "rr_registered": 0.6432646059828674, "nb_alpha": 0.04932080144097647, "n_obs": 33248.0, "median_pair_log_ratio_diff": null, "n_pairs": null, "n_days": null, "mean_gap_days": null, "label": "Excl. disruption days \u00b7 NB GLM"}, {"analysis": "Excl. disruption days", "method": "Matched wet vs dry", "rrr": 0.8555025260701193, "ci_low": 0.7864031677270323, "ci_high": 0.9414765059449075, "p_value": 1.624748712022108e-08, "rr_casual": 0.5471620199544431, "rr_registered": 0.6395796660799061, "nb_alpha": null, "n_obs": null, "median_pair_log_ratio_diff": -0.2333055153344043, "n_pairs": 1135.0, "n_days": 272.0, "mean_gap_days": 2.2352422907488987, "label": "Excl. disruption days \u00b7 Matched wet vs dry"}, {"analysis": "Mist as treatment", "method": "NB GLM", "rrr": 0.9681161606703222, "ci_low": 0.9297468535559607, "ci_high": 1.0080689135611396, "p_value": 0.1163007362562356, "rr_casual": 0.90208205616212, "rr_registered": 0.9317911349992544, "nb_alpha": 0.04552575201259344, "n_obs": 31914.0, "median_pair_log_ratio_diff": null, "n_pairs": null, "n_days": null, "mean_gap_days": null, "label": "Mist as treatment \u00b7 NB GLM"}, {"analysis": "Mist as treatment", "method": "Matched wet vs dry", "rrr": 0.9309987252514318, "ci_low": 0.8914979341957461, "ci_high": 0.9710150790515383, "p_value": 2.2728427012097056e-07, "rr_casual": 0.8670540552417461, "rr_registered": 0.9313160498770646, "nb_alpha": null, "n_obs": null, "median_pair_log_ratio_diff": -0.06755805245245376, "n_pairs": 4402.0, "n_days": 551.0, "mean_gap_days": 3.3814175374829625, "label": "Mist as treatment \u00b7 Matched wet vs dry"}], "data-13398ab0a07e8bbd08d61e367b6a8f62": [{"x": 1.0}], "data-014528fcc75045931a3dfd3184be3d28": [{"x": 0.75}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

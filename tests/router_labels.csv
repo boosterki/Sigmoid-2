@@ -1,0 +1,31 @@
+question,intent
+How many bikes should be available at 6 PM on a rainy weekday in November?,lookup
+Which hours on a hot Saturday in July need the most bikes?,lookup
+How much smaller is casual demand on wet days compared with dry ones?,compare
+What fleet do we need for a 95% service level if trips average 25 minutes?,what_if_fleet
+How many bikes would better rebalancing save us?,what_if_fleet
+What happened on 29 October 2012?,history
+Why do you treat windspeed zero as missing?,explain
+What share of the fleet sits idle at 3 AM on a weekday?,lookup
+What is the expected demand at 8 AM on a mild workday in May?,lookup
+How many rentals should we expect at noon on a cold Sunday in January?,lookup
+Show the hourly plan for a nice weekend day in September.,lookup
+How busy is 5 PM on a hot workday in August?,lookup
+Members versus casual riders on weekends: what is the difference?,compare
+Was 2012 busier than 2011?,compare
+How do weekday totals compare with weekend totals?,compare
+Is demand on rainy days lower than on dry days for members?,compare
+What fleet size gives a 99% service level?,what_if_fleet
+What if trips last 12 minutes instead of 18?,what_if_fleet
+How many bikes do we need if friction is 1.5?,what_if_fleet
+Should we buy more bikes for a 90% service level?,what_if_fleet
+Why is the forecast called served demand?,explain
+How do you define a bridge day?,explain
+What drives casual demand the most?,explain
+Explain how the comfort index is calculated.,explain
+What assumptions sit behind the trip duration prior?,explain
+What was the busiest day in the data?,history
+What was the lowest day on record?,history
+What happened on 2011-08-27?,history
+Tell me about rentals on 25 December 2011.,history
+What happened on 12 September 2012?,history

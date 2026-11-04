@@ -1,0 +1,88 @@
+{
+  "facts_reproduced": 20,
+  "facts_total": 20,
+  "raw_contract_failures": 2202,
+  "raw_contract_failures_by_column": {
+    "hum": 22,
+    "windspeed": 2180
+  },
+  "gap_hours_night_lull": 75,
+  "gap_hours_outage": 90,
+  "gap_runs_outage": 6,
+  "rows_inserted_zero": 75,
+  "windspeed_imputed": 2180,
+  "hum_imputed": 22,
+  "hum_zero_dates": [
+    "2011-03-10"
+  ],
+  "weathersit4_folded": 3,
+  "season_semantics": {
+    "season1_months": [
+      1,
+      2,
+      3,
+      12
+    ],
+    "season1_first_dec_day": "2011-12-21",
+    "workingday_mismatch_rows": 0
+  },
+  "corr_temp_atemp": 0.9876721390396437,
+  "vif_temp_with_atemp": 43.284304763185816,
+  "vif_temp_without_atemp": 1.0082641413273532,
+  "cross_file_equal": true,
+  "stl": {
+    "trend_growth_pct_per_month": 4.503791503888954,
+    "trend_level_start": 1202.5904374514546,
+    "trend_level_end": 3734.0303645913673,
+    "weekly_cycle_amplitude_pct": 14.121121108405932,
+    "weekly_cycle_by_day_pct": {
+      "Friday": 7.356670138208865,
+      "Monday": -4.57866379808477,
+      "Saturday": -1.714887417009403,
+      "Sunday": -5.927431227889346,
+      "Thursday": 4.602846439195862,
+      "Tuesday": 1.38392148253339,
+      "Wednesday": -0.4789901743910807
+    },
+    "remainder_sd_log": 0.24214526702023076,
+    "n_disruption_days": 35
+  },
+  "disruption_days": [
+    "2011-01-18",
+    "2011-01-25",
+    "2011-01-26",
+    "2011-01-27",
+    "2011-03-06",
+    "2011-03-10",
+    "2011-04-15",
+    "2011-04-16",
+    "2011-04-22",
+    "2011-08-27",
+    "2011-09-07",
+    "2011-09-23",
+    "2011-10-01",
+    "2011-10-29",
+    "2011-11-16",
+    "2011-12-07",
+    "2011-12-24",
+    "2011-12-25",
+    "2012-01-21",
+    "2012-02-29",
+    "2012-03-24",
+    "2012-04-15",
+    "2012-04-22",
+    "2012-05-14",
+    "2012-10-19",
+    "2012-10-22",
+    "2012-10-27",
+    "2012-10-29",
+    "2012-10-30",
+    "2012-10-31",
+    "2012-11-05",
+    "2012-11-12",
+    "2012-12-19",
+    "2012-12-24",
+    "2012-12-26"
+  ],
+  "clean_rows": 17454
+}

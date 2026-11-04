@@ -1,0 +1,42 @@
+{
+  "k": 2,
+  "silhouette": {
+    "2": 0.615,
+    "3": 0.351,
+    "4": 0.315,
+    "5": 0.19
+  },
+  "archetype_counts": {
+    "commute": 492,
+    "leisure": 236
+  },
+  "archetype_x_workingday": {
+    "non-working day": {
+      "commute": 3,
+      "leisure": 228
+    },
+    "working day": {
+      "commute": 489,
+      "leisure": 8
+    }
+  },
+  "n_misfits": 11,
+  "casual_share_by_archetype": {
+    "commute": 0.132,
+    "leisure": 0.316
+  },
+  "casual_share_overall": 0.18830168382645257,
+  "registered_peak_temp_bin_c": 33.0,
+  "casual_peak_temp_bin_c": 33.0,
+  "wet_vs_clear_casual": 0.39529549701873057,
+  "wet_vs_clear_registered": 0.5810068481710617,
+  "concentration": {
+    "weeks": 99,
+    "top10pct_hours_share_mean": 0.27836601566371233,
+    "top10pct_hours_share_p10": 0.25442847394268125,
+    "top10pct_hours_share_p90": 0.3119895482148398,
+    "top20pct_hours_share_mean": 0.47482407885917227,
+    "half_of_rentals_in_pct_hours": 0.22023809523809523,
+    "weekly_peak_to_average_mean": 3.3914890268720606
+  }
+}

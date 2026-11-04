@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-dde8b0fd6cba7da846d23967a1101a94"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "segment", "scale": {"domain": ["casual", "registered"], "range": ["#d95f02", "#1b6ca8"]}, "type": "nominal"}, "x": {"field": "temp_bin_c", "title": "temperature (\u00b0C, 2\u00b0 bins)", "type": "quantitative"}, "y": {"field": "mean_rentals", "title": "mean rentals per hour", "type": "quantitative"}}, "height": 220, "title": "Temperature response by segment (rise, then hot-weather plateau)", "width": 560, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-dde8b0fd6cba7da846d23967a1101a94": [{"temp_bin_c": 1.0, "hours": 33, "segment": "casual", "mean_rentals": 1.3333333333333333}, {"temp_bin_c": 3.0, "hours": 33, "segment": "casual", "mean_rentals": 2.3333333333333335}, {"temp_bin_c": 5.0, "hours": 265, "segment": "casual", "mean_rentals": 2.2264150943396226}, {"temp_bin_c": 7.0, "hours": 385, "segment": "casual", "mean_rentals": 3.4155844155844157}, {"temp_bin_c": 9.0, "hours": 1297, "segment": "casual", "mean_rentals": 4.887432536622976}, {"temp_bin_c": 11.0, "hours": 860, "segment": "casual", "mean_rentals": 8.695348837209302}, {"temp_bin_c": 13.0, "hours": 1897, "segment": "casual", "mean_rentals": 13.302055877701633}, {"temp_bin_c": 15.0, "hours": 1043, "segment": "casual", "mean_rentals": 19.81975071907958}, {"temp_bin_c": 17.0, "hours": 1162, "segment": "casual", "mean_rentals": 25.801204819277107}, {"temp_bin_c": 19.0, "hours": 1354, "segment": "casual", "mean_rentals": 29.56056129985229}, {"temp_bin_c": 21.0, "hours": 1087, "segment": "casual", "mean_rentals": 39.08739650413983}, {"temp_bin_c": 23.0, "hours": 1453, "segment": "casual", "mean_rentals": 39.786648313833446}, {"temp_bin_c": 25.0, "hours": 1401, "segment": "casual", "mean_rentals": 42.14917915774447}, {"temp_bin_c": 27.0, "hours": 1734, "segment": "casual", "mean_rentals": 47.364475201845444}, {"temp_bin_c": 29.0, "hours": 1260, "segment": "casual", "mean_rentals": 60.51111111111111}, {"temp_bin_c": 31.0, "hours": 1081, "segment": "casual", "mean_rentals": 77.64477335800186}, {"temp_bin_c": 33.0, "hours": 538, "segment": "casual", "mean_rentals": 86.47397769516729}, {"temp_bin_c": 35.0, "hours": 269, "segment": "casual", "mean_rentals": 82.05576208178438}, {"temp_bin_c": 37.0, "hours": 192, "segment": "casual", "mean_rentals": 81.98958333333333}, {"temp_bin_c": 39.0, "hours": 33, "segment": "casual", "mean_rentals": 63.121212121212125}, {"temp_bin_c": 1.0, "hours": 33, "segment": "registered", "mean_rentals": 37.515151515151516}, {"temp_bin_c": 3.0, "hours": 33, "segment": "registered", "mean_rentals": 32.57575757575758}, {"temp_bin_c": 5.0, "hours": 265, "segment": "registered", "mean_rentals": 52.71320754716981}, {"temp_bin_c": 7.0, "hours": 385, "segment": "registered", "mean_rentals": 59.96363636363636}, {"temp_bin_c": 9.0, "hours": 1297, "segment": "registered", "mean_rentals": 71.83346183500386}, {"temp_bin_c": 11.0, "hours": 860, "segment": "registered", "mean_rentals": 85.84186046511628}, {"temp_bin_c": 13.0, "hours": 1897, "segment": "registered", "mean_rentals": 115.1070110701107}, {"temp_bin_c": 15.0, "hours": 1043, "segment": "registered", "mean_rentals": 133.86097794822626}, {"temp_bin_c": 17.0, "hours": 1162, "segment": "registered", "mean_rentals": 145.36574870912222}, {"temp_bin_c": 19.0, "hours": 1354, "segment": "registered", "mean_rentals": 137.70384047267356}, {"temp_bin_c": 21.0, "hours": 1087, "segment": "registered", "mean_rentals": 161.66329346826126}, {"temp_bin_c": 23.0, "hours": 1453, "segment": "registered", "mean_rentals": 170.4322092222987}, {"temp_bin_c": 25.0, "hours": 1401, "segment": "registered", "mean_rentals": 170.62027123483227}, {"temp_bin_c": 27.0, "hours": 1734, "segment": "registered", "mean_rentals": 174.2722029988466}, {"temp_bin_c": 29.0, "hours": 1260, "segment": "registered", "mean_rentals": 209.92301587301588}, {"temp_bin_c": 31.0, "hours": 1081, "segment": "registered", "mean_rentals": 246.29324699352452}, {"temp_bin_c": 33.0, "hours": 538, "segment": "registered", "mean_rentals": 257.85873605947955}, {"temp_bin_c": 35.0, "hours": 269, "segment": "registered", "mean_rentals": 242.36802973977694}, {"temp_bin_c": 37.0, "hours": 192, "segment": "registered", "mean_rentals": 245.046875}, {"temp_bin_c": 39.0, "hours": 33, "segment": "registered", "mean_rentals": 181.78787878787878}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

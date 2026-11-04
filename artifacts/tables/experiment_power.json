@@ -1,0 +1,15 @@
+{
+  "design": "switchback, 8 weeks, 3 arms (normal / -10% withheld / +10% pre-placed)",
+  "clusters": 30,
+  "cluster_weeks_per_arm": 80.0,
+  "am_peak_mean_system_rentals_per_hour": 427.3048780487805,
+  "am_peak_hourly_variance": 7806.169344632653,
+  "extra_dispersion_alpha": 0.040412324538916806,
+  "nb_alpha_ws2_model": 0.05363588949389766,
+  "mean_rentals_per_cluster_hour": 14.24349593495935,
+  "cv_cluster_week": 0.17284285881096112,
+  "assumed_cluster_noise_cv": 0.15,
+  "mde_pct": 7.957140781431615,
+  "power_at_5pct": 0.4715,
+  "power_at_10pct": 0.9765
+}

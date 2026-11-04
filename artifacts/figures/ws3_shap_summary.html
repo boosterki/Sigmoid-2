@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a6377040ac4007c021f2cdaa8c6d159d"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "segment", "scale": {"domain": ["casual", "registered"], "range": ["#d95f02", "#1b6ca8"]}, "type": "nominal"}, "x": {"field": "mean_abs_shap", "title": "mean |SHAP| (log-rate units)", "type": "quantitative"}, "y": {"field": "feature", "sort": "-x", "title": null, "type": "nominal"}, "yOffset": {"field": "segment", "type": "nominal"}}, "height": 320, "title": "Drivers of demand (CatBoost SHAP, 2012 sample)", "width": 420, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-a6377040ac4007c021f2cdaa8c6d159d": [{"segment": "casual", "feature": "hour", "mean_abs_shap": 1.3621898809160324, "rank": 1}, {"segment": "casual", "feature": "dow", "mean_abs_shap": 0.1919975883062595, "rank": 4}, {"segment": "casual", "feature": "month", "mean_abs_shap": 0.21543437194214551, "rank": 3}, {"segment": "casual", "feature": "met_season", "mean_abs_shap": 0.006305809340316965, "rank": 13}, {"segment": "casual", "feature": "calendar_class", "mean_abs_shap": 0.1267342367551094, "rank": 6}, {"segment": "casual", "feature": "archetype_prior", "mean_abs_shap": 0.11107724191418139, "rank": 7}, {"segment": "casual", "feature": "weather_cat", "mean_abs_shap": 0.08550121305956623, "rank": 9}, {"segment": "casual", "feature": "temp_c", "mean_abs_shap": 0.09992717140949084, "rank": 8}, {"segment": "casual", "feature": "hum_pct", "mean_abs_shap": 0.12772462609923377, "rank": 5}, {"segment": "casual", "feature": "wind_kmh", "mean_abs_shap": 0.07528216424847137, "rank": 11}, {"segment": "casual", "feature": "comfort_index", "mean_abs_shap": 0.5602632532917549, "rank": 2}, {"segment": "casual", "feature": "wet", "mean_abs_shap": 0.000677919684676599, "rank": 14}, {"segment": "casual", "feature": "daylight", "mean_abs_shap": 0.06670051337182241, "rank": 12}, {"segment": "casual", "feature": "growth_index", "mean_abs_shap": 0.08132835558450313, "rank": 10}, {"segment": "registered", "feature": "hour", "mean_abs_shap": 1.3864959998361142, "rank": 1}, {"segment": "registered", "feature": "dow", "mean_abs_shap": 0.21122876384527145, "rank": 2}, {"segment": "registered", "feature": "month", "mean_abs_shap": 0.07392032865337553, "rank": 8}, {"segment": "registered", "feature": "met_season", "mean_abs_shap": 0.0013529073830292027, "rank": 13}, {"segment": "registered", "feature": "calendar_class", "mean_abs_shap": 0.1309637043533026, "rank": 4}, {"segment": "registered", "feature": "archetype_prior", "mean_abs_shap": 0.10705172078026044, "rank": 6}, {"segment": "registered", "feature": "weather_cat", "mean_abs_shap": 0.059218873419023696, "rank": 10}, {"segment": "registered", "feature": "temp_c", "mean_abs_shap": 0.07359230645661954, "rank": 9}, {"segment": "registered", "feature": "hum_pct", "mean_abs_shap": 0.07698629150094063, "rank": 7}, {"segment": "registered", "feature": "wind_kmh", "mean_abs_shap": 0.039536673055397376, "rank": 11}, {"segment": "registered", "feature": "comfort_index", "mean_abs_shap": 0.18389575000118577, "rank": 3}, {"segment": "registered", "feature": "wet", "mean_abs_shap": 0.0011357146894896686, "rank": 14}, {"segment": "registered", "feature": "daylight", "mean_abs_shap": 0.015174724602431367, "rank": 12}, {"segment": "registered", "feature": "growth_index", "mean_abs_shap": 0.12413914391849754, "rank": 5}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

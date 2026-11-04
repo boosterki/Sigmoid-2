@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-1390e3b9cf461c7fd4f16b2076f8eac3"}, "mark": {"type": "bar", "color": "#1b6ca8"}, "encoding": {"x": {"field": "peak", "title": "daily peak bikes in use (before friction)", "type": "quantitative"}, "y": {"axis": {"format": "%"}, "field": "share_of_days", "title": "share of days", "type": "quantitative"}}}, {"data": {"name": "data-0a78f779789c881b8de25ed50f345923"}, "mark": {"type": "rule", "color": "#c0392b"}, "encoding": {"x": {"field": "x", "type": "quantitative"}}}, {"data": {"name": "data-0a78f779789c881b8de25ed50f345923"}, "mark": {"type": "text", "align": "left", "color": "#c0392b", "dx": 4, "dy": -120}, "encoding": {"text": {"field": "t", "type": "nominal"}, "x": {"field": "x", "type": "quantitative"}}}], "height": 240, "title": "Daily peak concurrency distribution (trip median 18 min, 2011-12 day mix)", "width": 520, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-1390e3b9cf461c7fd4f16b2076f8eac3": [{"peak": 34.78333333333333, "share_of_days": 0.00011027397260273996}, {"peak": 50.349999999999994, "share_of_days": 0.0019226027397260211}, {"peak": 65.91666666666667, "share_of_days": 0.00918630136986258}, {"peak": 81.48333333333333, "share_of_days": 0.01206849315068423}, {"peak": 97.05, "share_of_days": 0.01351301369862955}, {"peak": 112.61666666666667, "share_of_days": 0.01701643835616409}, {"peak": 128.18333333333334, "share_of_days": 0.0209075342465748}, {"peak": 143.75, "share_of_days": 0.0229780821917807}, {"peak": 159.31666666666666, "share_of_days": 0.023184246575342193}, {"peak": 174.88333333333333, "share_of_days": 0.02205616438356188}, {"peak": 190.45, "share_of_days": 0.025269178082191868}, {"peak": 206.01666666666665, "share_of_days": 0.02614931506849315}, {"peak": 221.58333333333334, "share_of_days": 0.029921232876712424}, {"peak": 237.15, "share_of_days": 0.0318034246575343}, {"peak": 252.71666666666667, "share_of_days": 0.03895753424657516}, {"peak": 268.2833333333333, "share_of_days": 0.04295273972602781}, {"peak": 283.85, "share_of_days": 0.042914383561644086}, {"peak": 299.41666666666663, "share_of_days": 0.04786095890410969}, {"peak": 314.98333333333335, "share_of_days": 0.04693972602739756}, {"peak": 330.54999999999995, "share_of_days": 0.05154383561643874}, {"peak": 346.1166666666667, "share_of_days": 0.049467123287671645}, {"peak": 361.6833333333333, "share_of_days": 0.05439863013698653}, {"peak": 377.25, "share_of_days": 0.05308219178082209}, {"peak": 392.81666666666666, "share_of_days": 0.045225342465753104}, {"peak": 408.3833333333333, "share_of_days": 0.044808219178082}, {"peak": 423.95000000000005, "share_of_days": 0.03685000000000013}, {"peak": 439.51666666666665, "share_of_days": 0.03212397260274}, {"peak": 455.08333333333337, "share_of_days": 0.02541506849315094}, {"peak": 470.65, "share_of_days": 0.023282191780822126}, {"peak": 486.2166666666667, "share_of_days": 0.0182157534246577}, {"peak": 501.7833333333333, "share_of_days": 0.0156787671232876}, {"peak": 517.35, "share_of_days": 0.014056164383561602}, {"peak": 532.9166666666667, "share_of_days": 0.010473287671232874}, {"peak": 548.4833333333333, "share_of_days": 0.009789726027397258}, {"peak": 564.05, "share_of_days": 0.006732191780821884}, {"peak": 579.6166666666667, "share_of_days": 0.005743150684931478}, {"peak": 595.1833333333334, "share_of_days": 0.004667123287671219}, {"peak": 610.75, "share_of_days": 0.0034369863013698626}, {"peak": 626.3166666666666, "share_of_days": 0.002954109589041096}, {"peak": 641.8833333333333, "share_of_days": 0.0021561643835616468}, {"peak": 657.45, "share_of_days": 0.0018095890410958935}, {"peak": 673.0166666666667, "share_of_days": 0.0015164383561643866}, {"peak": 688.5833333333333, "share_of_days": 0.001685616438356167}, {"peak": 704.15, "share_of_days": 0.0013815068493150703}, {"peak": 719.7166666666667, "share_of_days": 0.0010938356164383585}, {"peak": 735.2833333333333, "share_of_days": 0.0011993150684931533}, {"peak": 750.8499999999999, "share_of_days": 0.001054109589041098}, {"peak": 766.4166666666667, "share_of_days": 0.0009780821917808242}, {"peak": 781.9833333333333, "share_of_days": 0.0007349315068493163}, {"peak": 797.55, "share_of_days": 0.0008890410958904128}, {"peak": 813.1166666666667, "share_of_days": 0.0004910958904109598}, {"peak": 828.6833333333334, "share_of_days": 0.0005863013698630148}, {"peak": 844.25, "share_of_days": 0.0004301369863013706}, {"peak": 859.8166666666666, "share_of_days": 0.00018219178082191814}, {"peak": 875.3833333333333, "share_of_days": 7.945205479452067e-05}, {"peak": 890.95, "share_of_days": 4.383561643835624e-05}, {"peak": 906.5166666666667, "share_of_days": 2.4657534246575382e-05}, {"peak": 922.0833333333333, "share_of_days": 5.479452054794529e-06}, {"peak": 937.65, "share_of_days": 0.0}, {"peak": 953.2166666666667, "share_of_days": 2.7397260273972647e-06}], "data-0a78f779789c881b8de25ed50f345923": [{"x": 540.0, "t": "95th pct = 540"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

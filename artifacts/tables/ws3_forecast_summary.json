@@ -1,0 +1,60 @@
+{
+  "model_backend": "scikit-learn HistGradientBoosting (Poisson) \u2014 CatBoost not installed",
+  "champion": "catboost_tweedie",
+  "beats_simpler_on_peak_wape": {
+    "seasonal_naive": true,
+    "profile_level": true,
+    "nb_glm": true
+  },
+  "catboost_params": {
+    "casual": {
+      "loss": "Poisson",
+      "depth": 6
+    },
+    "registered": {
+      "loss": "Poisson",
+      "depth": 6
+    }
+  },
+  "interval_method": "Mondrian split-conformal (hour groups: peak / day / night)",
+  "peaks_under_covered_globally": true,
+  "intraday_corr": 0.4725965497711055,
+  "reconciliation_kept": false,
+  "coverage_within_3pts_all": true,
+  "pooled_honest": {
+    "catboost_lags": {
+      "wape": 0.1487,
+      "peak_wape": 0.1273,
+      "skill_vs_naive": 0.3931,
+      "peak_skill_vs_naive": 0.3238
+    },
+    "catboost_tweedie": {
+      "wape": 0.1445,
+      "peak_wape": 0.1262,
+      "skill_vs_naive": 0.4102,
+      "peak_skill_vs_naive": 0.3296
+    },
+    "nb_glm": {
+      "wape": 0.2005,
+      "peak_wape": 0.1887,
+      "skill_vs_naive": 0.1815,
+      "peak_skill_vs_naive": -0.0028
+    },
+    "profile_level": {
+      "wape": 0.2264,
+      "peak_wape": 0.1711,
+      "skill_vs_naive": 0.0759,
+      "peak_skill_vs_naive": 0.0907
+    },
+    "seasonal_naive": {
+      "wape": 0.245,
+      "peak_wape": 0.1882,
+      "skill_vs_naive": 0.0,
+      "peak_skill_vs_naive": 0.0
+    }
+  },
+  "disruption_sensitivity": {
+    "wape_with": 0.138377168477165,
+    "wape_without": 0.13434532925486245
+  }
+}

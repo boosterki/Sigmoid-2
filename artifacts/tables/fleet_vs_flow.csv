@@ -1,0 +1,4 @@
+trip_median,fleet_poor_rebalancing,fleet_good_rebalancing,bikes_saved_by_rebalancing,pct_saved
+12,563.0,450.0,113.0,0.20071047957371227
+18,810.0,648.0,162.0,0.2
+25,1082.0,866.0,216.0,0.19963031423290203
