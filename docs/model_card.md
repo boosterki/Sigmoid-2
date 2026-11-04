@@ -41,6 +41,8 @@ By segment:
 | seasonal_naive   | casual     |  0.439 |       0.373 |
 | seasonal_naive   | registered |  0.226 |       0.182 |
 
+**Gradient-boosting backend used for this run: scikit-learn HistGradientBoosting (Poisson) — CatBoost not installed.**
+
 **Champion: `catboost_tweedie`** — lowest peak-window WAPE among the non-diagnostic contenders. Beats every simpler contender on peak
 WAPE: seasonal_naive: yes, profile_level: yes, nb_glm: yes. CatBoost settings chosen on the tuning
 folds: casual: Poisson, depth 6, registered: Poisson, depth 6. `catboost_lags` is a diagnostic
